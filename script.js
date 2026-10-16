@@ -103,11 +103,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeOptionCards = document.querySelectorAll('.theme-option-card');
     const replayIntroBtn = document.getElementById('replay-intro-btn');
 
-    const savedTheme = localStorage.getItem('tyson_theme') || 'noir';
+    const savedTheme = localStorage.getItem('tyson_theme_v2') || 'noir-aero';
 
     function applyTheme(themeName) {
         document.documentElement.setAttribute('data-theme', themeName);
-        localStorage.setItem('tyson_theme', themeName);
+        localStorage.setItem('tyson_theme_v2', themeName);
 
         themeOptionCards.forEach(card => {
             if (card.getAttribute('data-theme-choice') === themeName) {

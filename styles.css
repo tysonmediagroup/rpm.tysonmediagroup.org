@@ -20,8 +20,37 @@
     --trans-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Theme 1: Default Noir (Midnight Monochrome) */
-:root, [data-theme="noir"] {
+/* Theme 1: Default — Black Frutiger Aero (Obsidian Gloss Glass, 50/50 Specular Split & Tactile Gel) */
+:root, [data-theme="noir-aero"] {
+    --bg-black: #000000;
+    --bg-body-gradient:
+        radial-gradient(ellipse 90% 45% at 50% -10%, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 45%, #000000 85%),
+        linear-gradient(180deg, #050507 0%, #000000 100%);
+    --bg-header: linear-gradient(180deg, #242429 0%, #151518 49%, #070709 50%, #000000 100%);
+    --bg-surface: #0a0a0c;
+    --bg-surface-hover: #141418;
+    --bg-card: #08080a;
+    --bg-card-hover: #111115;
+    --bg-yt-card: #070709;
+    
+    --text-white: #ffffff;
+    --text-pure: #ffffff;
+    --text-body: #e5e7eb;
+    --text-muted: #b0b7c3;
+    --text-dim: #7e8694;
+    
+    --border-subtle: rgba(255, 255, 255, 0.24);
+    --border-hover: rgba(255, 255, 255, 0.65);
+    --accent-color: #ffffff;
+    --accent-glow: rgba(255, 255, 255, 0.42);
+    
+    --card-radius: 16px;
+    --btn-radius: 22px;
+    --box-shadow-card: 0 14px 36px rgba(0, 0, 0, 0.92), inset 0 1px 0 rgba(255, 255, 255, 0.38), inset 0 -1px 0 rgba(0, 0, 0, 0.85);
+}
+
+/* Theme 2: Noir Midnight (Flat Architectural Monochrome) */
+[data-theme="noir"] {
     --bg-black: #000000;
     --bg-body-gradient: radial-gradient(circle at 50% 15%, rgba(255, 255, 255, 0.03) 0%, #000000 80%);
     --bg-header: rgba(0, 0, 0, 0.98);
@@ -3038,3 +3067,127 @@ code {
 .is-mobile .yt-card:hover {
     transform: none;
 }
+
+/* ==========================================================================
+   BLACK FRUTIGER AERO — DEFAULT OBSIDIAN AQUA GLASS & SPECULAR GEL ENGINE
+   (`[data-theme="noir-aero"]`)
+   ========================================================================== */
+
+.swatch-noir-aero {
+    background: linear-gradient(180deg, #ffffff 0%, #6b7280 49%, #111115 50%, #000000 100%);
+    border-color: #ffffff;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.55), inset 0 1px 0 #ffffff;
+}
+
+[data-theme="noir-aero"] .main-header {
+    background: linear-gradient(180deg, #28282f 0%, #16161b 49%, #070709 50%, #000000 100%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.48), inset 0 -1px 0 rgba(255, 255, 255, 0.12);
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.28);
+}
+
+[data-theme="noir-aero"] .nav-link,
+[data-theme="noir-aero"] .page-title,
+[data-theme="noir-aero"] .editorial-title,
+[data-theme="noir-aero"] .hero-tagline-title {
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95), 0 0 18px rgba(255, 255, 255, 0.18);
+}
+
+[data-theme="noir-aero"] .editorial-tag {
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9), 0 0 14px rgba(255, 255, 255, 0.35);
+}
+
+[data-theme="noir-aero"] .settings-toggle-btn {
+    background: linear-gradient(180deg, #32323a 0%, #1c1c22 49%, #0a0a0d 50%, #020203 100%);
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    color: #ffffff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.65), inset 0 -1px 0 rgba(0, 0, 0, 0.8);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+[data-theme="noir-aero"] .settings-toggle-btn:hover {
+    background: linear-gradient(180deg, #42424d 0%, #25252d 49%, #101015 50%, #050507 100%);
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 22px rgba(255, 255, 255, 0.18), inset 0 1px 1px #ffffff;
+}
+
+[data-theme="noir-aero"] .btn-primary {
+    background: linear-gradient(180deg, #ffffff 0%, #e5e7eb 49%, #cbd5e1 50%, #94a3b8 100%);
+    color: #000000;
+    border: 1px solid #ffffff;
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25), inset 0 1px 2px #ffffff, inset 0 -1px 2px rgba(0, 0, 0, 0.35);
+    font-weight: 600;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="noir-aero"] .btn-primary:active {
+    transform: translateY(2px);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="noir-aero"] .btn-secondary,
+[data-theme="noir-aero"] .btn-outline,
+[data-theme="noir-aero"] .btn-youtube-cta {
+    background: linear-gradient(180deg, #2a2a32 0%, #17171c 49%, #09090c 50%, #020203 100%);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85);
+}
+
+[data-theme="noir-aero"] .card,
+[data-theme="noir-aero"] .yt-card,
+[data-theme="noir-aero"] .yt-channel-banner,
+[data-theme="noir-aero"] .editorial-form {
+    background: linear-gradient(180deg, #1b1b22 0%, #0e0e13 49%, #060608 50%, #020203 100%);
+    border: 1.5px solid rgba(255, 255, 255, 0.26);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.42), inset 0 -1px 0 rgba(0, 0, 0, 0.8);
+}
+
+[data-theme="noir-aero"] .card:hover,
+[data-theme="noir-aero"] .yt-card:hover {
+    border-color: rgba(255, 255, 255, 0.78);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.95), 0 0 20px rgba(255, 255, 255, 0.22), inset 0 1px 0 #ffffff;
+}
+
+[data-theme="noir-aero"] .search-box,
+[data-theme="noir-aero"] .form-field input,
+[data-theme="noir-aero"] .form-field select,
+[data-theme="noir-aero"] .form-field textarea {
+    background: linear-gradient(180deg, #030304 0%, #0c0c10 52%, #15151b 100%);
+    border: 1.5px solid rgba(255, 255, 255, 0.28);
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.95), 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+[data-theme="noir-aero"] .search-box:focus-within,
+[data-theme="noir-aero"] .form-field input:focus,
+[data-theme="noir-aero"] .form-field select:focus,
+[data-theme="noir-aero"] .form-field textarea:focus {
+    border-color: #ffffff;
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.95), 0 0 16px rgba(255, 255, 255, 0.38);
+}
+
+[data-theme="noir-aero"] .settings-modal-dialog {
+    border: 1.5px solid rgba(255, 255, 255, 0.34);
+    background: linear-gradient(180deg, #1b1b21 0%, #0d0d11 49%, #050507 50%, #000000 100%);
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.95), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="noir-aero"] .theme-option-card,
+[data-theme="noir-aero"] .settings-action-row {
+    border: 1.5px solid rgba(255, 255, 255, 0.22);
+    background: linear-gradient(180deg, #1e1e25 0%, #101014 49%, #070709 50%, #020203 100%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="noir-aero"] .theme-option-card.selected {
+    border-color: #ffffff;
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+[data-theme="noir-aero"] .main-footer {
+    background: linear-gradient(180deg, #141418 0%, #070709 35%, #000000 100%);
+    border-top: 1.5px solid rgba(255, 255, 255, 0.28);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 -12px 36px rgba(0, 0, 0, 0.85);
+}
+
